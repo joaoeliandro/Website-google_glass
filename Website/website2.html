@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste Java</title>
+    <script>
+        var quebrada = false;
+        function mudaLampada(estado) {
+            switch (estado) {
+                case 1:
+                    if (!quebrada)
+                        arquivo = "_images/lampada-acesa.jpg"
+                    break;
+                case 2:
+                    if (!quebrada)
+                        arquivo = "_images/lampada-apagada.jpg"
+                    break;
+                default:
+                    arquivo = "_images/lampada-quebrada.jpg"
+                    quebrada = true;
+                    break;
+            }
+            document.getElementById("luz").src = arquivo
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Acenda a lâmpada</h1>
+    <img src="_images/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada(1)" onmouseout="mudaLampada(2)"
+        onclick="mudaLampada(3)">
+    <script>
+    </script>
+
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/q0KtW7J_d4c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</body>
+
+</html>
